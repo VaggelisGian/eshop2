@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.eshop2.ui.product.AddEditProductActivity;
 import com.example.eshop2.ui.product.ProductAdapter;
+import com.example.eshop2.ui.product.EditProductActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
@@ -20,6 +21,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.widget.Toolbar;
 
 
@@ -34,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private ProductViewModel productViewModel;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
+
+    private FloatingActionButton buttonAddProduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +55,7 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(item -> {
-            // Handle navigation view item clicks here.
-            drawerLayout.closeDrawer(GravityCompat.START);
-            return true;
-        });
+
 
 
         java.text.DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
@@ -76,14 +75,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton buttonAddProduct = findViewById(R.id.button_add_product);
+        buttonAddProduct = (FloatingActionButton) findViewById(R.id.button_add_product);
         buttonAddProduct.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddEditProductActivity.class);
+            public void onClick(View v) {
+                EditProductActivity();
+                Intent intent = new Intent(MainActivity.this, com.example.eshop2.ui.product.EditProductActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    public void EditProductActivity()
+    {
+        Intent intent = new Intent(this , com.example.eshop2.ui.product.EditProductActivity.class);
+        startActivity(intent);
     }
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

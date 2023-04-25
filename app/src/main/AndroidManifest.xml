@@ -5,13 +5,15 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label=""
+        android:label="Eshop vagglanos sotoos for the win"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eshop2">
+
         <activity
-            android:name="com.example.eshop2.ui.product.AddEditProductActivity"
+            android:name="com.example.eshop2.ui.product.EditProductActivity"
             android:label="Add/Edit Product" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
