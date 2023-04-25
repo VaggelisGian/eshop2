@@ -1,4 +1,4 @@
-Sure, here is a summary of the eShop2 project and the files shared for a presentation:
+
 
 eShop2 is an e-commerce Android application that allows users to browse, search, and purchase products. The application has a modern and user-friendly interface with several functionalities including a product list, product details page, search functionality, shopping cart, and checkout. The application also features a user profile page where users can manage their personal information, view their order history, and track their orders.
 
