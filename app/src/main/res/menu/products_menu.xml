@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/products"
+        android:title="Products">
+        <menu>
+            <item
+                android:id="@+id/add_product_option"
+                android:title="Add"/>
+            <item
+                android:id="@+id/drop_product_option"
+                android:title="Drop"/>
+            <item
+                android:id="@+id/edit_product_option"
+                android:title="Edit"/>
+        </menu>
+    </item>
+</menu>

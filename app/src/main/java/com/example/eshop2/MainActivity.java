@@ -19,9 +19,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -58,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
         java.text.DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(getApplicationContext());
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -90,13 +94,47 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this , com.example.eshop2.ui.product.EditProductActivity.class);
         startActivity(intent);
     }
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-            NavigationView navigationView = findViewById(R.id.navigation_view);
-            drawerLayout.openDrawer(navigationView);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.drawer_menu, menu);
+        return true;
     }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+                NavigationView navigationView = findViewById(R.id.navigation_view);
+                drawerLayout.openDrawer(navigationView);
+                return true;
+            case R.id.profile:
+                // Handle Profile click
+                return true;
+            case R.id.home:
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.suppliers:
+                // Handle Suppliers click
+                return true;
+            case R.id.add_product_option:
+                Intent intent1 = new Intent(MainActivity.this, com.example.eshop2.ui.product.EditProductActivity.class);
+                startActivity(intent1);
+                return true;
+            case R.id.drop_product_option:
+                // Handle drop product option
+                return true;
+            case R.id.edit_product_option:
+                // Handle edit product option
+                return true;
+            // Handle other menu items if needed
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

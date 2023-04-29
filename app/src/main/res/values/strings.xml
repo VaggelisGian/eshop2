@@ -11,10 +11,13 @@
     <string name="save">Save</string>
     <string name="action_cart">Cart</string>
     <string name="cancel">Cancel</string>
-    <string name="edit_product">Edit Product</string>
+    <string name="edit_product">‎ ‎ ‎ ‎ ‎  Edit Product</string>
+    <string name="add_product">‎ ‎ ‎ ‎ ‎  Add Product</string>
+    <string name="delete_product">‎ ‎ ‎ ‎ ‎  Delete Product</string>
+    <string name="edit_supp">‎ ‎ ‎ ‎ ‎  Edit Supplier</string>
+    <string name="add_supp">‎ ‎ ‎ ‎ ‎  Add Supplier</string>
+    <string name="delete_supp">‎ ‎ ‎ ‎ ‎  Delete Supplier</string>
     <string name="add_to_cart_description">Add to cart</string>
-    <string name="add_product">Add Product</string>
-    <string name="delete_product">Delete Product</string>
     <string name="product_saved">Product saved.</string>
     <string name="product_deleted">Product deleted.</string>
     <string name="Save">Save</string>
