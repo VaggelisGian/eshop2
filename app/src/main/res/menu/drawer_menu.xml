@@ -1,4 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view"
     >
     <item
         android:id="@+id/profile"
@@ -33,11 +35,11 @@
 
 
     <item
-        android:id="@+id/products"
+
         android:checked="true"
         android:title="@string/product_name">
         <menu>
-            <group>
+
             <item
                 android:id="@+id/add_product_option"
                 android:title="@string/add_product" />
@@ -47,7 +49,7 @@
             <item
                 android:id="@+id/edit_product_option"
                 android:title="@string/edit_product" />
-            </group>
+
         </menu>
     </item>
 </menu>

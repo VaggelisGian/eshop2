@@ -19,11 +19,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAddProduct = (FloatingActionButton) findViewById(R.id.button_add_product);
         buttonAddProduct.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Log.d("MainActivity", "onClick: add_product_option");
                 EditProductActivity();
                 Intent intent = new Intent(MainActivity.this, com.example.eshop2.ui.product.EditProductActivity.class);
                 startActivity(intent);
@@ -122,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 // Handle Suppliers click
                 return true;
             case R.id.add_product_option:
+                Log.d("MainActivity", "onClick: add_product_option");
                 Intent intent1 = new Intent(MainActivity.this, com.example.eshop2.ui.product.EditProductActivity.class);
                 startActivity(intent1);
                 return true;
